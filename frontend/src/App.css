@@ -1,0 +1,419 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #20243a;
+  background: #f5f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.topbar {
+  height: 76px;
+  background: white;
+  border-bottom: 1px solid #e9eaf1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #6658d3;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand h2 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.brand span {
+  font-size: 11px;
+  color: #85889b;
+}
+
+.status {
+  background: #efedff;
+  color: #6658d3;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: calc(100vh - 76px);
+}
+
+.sidebar {
+  background: white;
+  border-right: 1px solid #e9eaf1;
+  padding: 30px 22px;
+}
+
+.sidebar h3 {
+  font-size: 15px;
+  margin: 0 0 22px;
+}
+
+.upload-box {
+  border: 1px dashed #c9c4ee;
+  background: #f9f8ff;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.upload-box label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.upload-box input {
+  width: 100%;
+  font-size: 11px;
+}
+
+.upload-box button,
+.question-form button {
+  border: none;
+  border-radius: 9px;
+  background: #6658d3;
+  color: white;
+  padding: 11px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.file-name {
+  font-size: 11px;
+  color: #6658d3;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.document-list {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.document-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+}
+
+.document-item:hover,
+.document-item.selected {
+  background: #f2f0ff;
+  border-color: #e1ddff;
+}
+
+.pdf-icon {
+  background: #ffecec;
+  color: #d45b5b;
+  padding: 7px 5px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.document-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.document-info strong {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.document-info small {
+  color: #85889b;
+  font-size: 10px;
+}
+
+.empty-text {
+  color: #9699aa;
+  font-size: 12px;
+}
+
+.chat-section {
+  padding: 55px 7%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.chat-heading h1 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin: 7px 0;
+}
+
+.chat-heading p {
+  color: #85889b;
+  font-size: 13px;
+}
+
+.eyebrow {
+  color: #6658d3 !important;
+  font-size: 10px !important;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.selected-document {
+  margin-top: 32px;
+  background: white;
+  border: 1px solid #e9eaf1;
+  border-radius: 12px;
+  padding: 15px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.selected-document span,
+.selected-document small {
+  font-size: 11px;
+  color: #85889b;
+}
+
+.selected-document strong {
+  font-size: 13px;
+}
+
+.welcome {
+  margin: 65px auto;
+  text-align: center;
+  max-width: 400px;
+}
+
+.welcome-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  background: #efedff;
+  color: #6658d3;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  font-size: 27px;
+}
+
+.welcome h2 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #85889b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.message {
+  margin-top: 18px;
+  background: #fff5e8;
+  color: #936322;
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+}
+
+.answer-area {
+  margin-top: 25px;
+}
+
+.loading {
+  color: #6658d3;
+  font-size: 13px;
+}
+
+.answer-card {
+  background: white;
+  border: 1px solid #e9eaf1;
+  border-radius: 14px;
+  padding: 23px;
+  box-shadow: 0 5px 20px rgba(35, 30, 80, 0.03);
+}
+
+.answer-card h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.answer-text {
+  font-size: 13px;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  color: #45485d;
+}
+
+.sources {
+  border-top: 1px solid #eeeef3;
+  margin-top: 22px;
+  padding-top: 15px;
+}
+
+.sources h4 {
+  font-size: 13px;
+}
+
+.source-item {
+  background: #f8f8fc;
+  padding: 12px;
+  border-radius: 9px;
+  margin-top: 10px;
+}
+
+.source-item strong {
+  color: #6658d3;
+  font-size: 11px;
+}
+
+.source-item p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #686b7d;
+}
+
+.question-form {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+.question-form input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #dedfea;
+  border-radius: 10px;
+  background: white;
+  padding: 14px;
+  outline: none;
+  font-size: 13px;
+}
+
+.question-form input:focus {
+  border-color: #887ce0;
+}
+
+.question-form button {
+  min-width: 85px;
+}
+
+.footer-note {
+  text-align: center;
+  color: #a1a3b1;
+  font-size: 10px;
+  margin-top: 17px;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e9eaf1;
+  }
+
+  .chat-section {
+    padding: 35px 20px;
+  }
+
+  .chat-heading h1 {
+    font-size: 25px;
+  }
+
+  .question-form {
+    margin-top: 35px;
+  }
+}
+.answer-text {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #45485d;
+}
+
+.answer-text p {
+  margin: 8px 0 14px;
+}
+
+.answer-text ul,
+.answer-text ol {
+  padding-left: 22px;
+}
+
+.answer-text li {
+  margin-bottom: 9px;
+}
+
+.answer-text strong {
+  color: #292b43;
+  font-weight: 700;
+}
+
+.answer-text h1,
+.answer-text h2,
+.answer-text h3 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
