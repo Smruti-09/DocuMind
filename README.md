@@ -1,3 +1,5 @@
+<img width="1908" height="912" alt="image" src="https://github.com/user-attachments/assets/05577bd9-0f9a-4cf8-8a7f-19f192cc5a6d" />
+
 # DocuMind – Document Intelligence Assistant
 
 An AI-powered document question-answering system built using Retrieval-Augmented Generation (RAG). Upload PDF documents and ask natural-language questions to receive context-aware answers with source references.
